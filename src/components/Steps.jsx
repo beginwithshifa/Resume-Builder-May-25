@@ -9,7 +9,9 @@ import TextField from '@mui/material/TextField';
 
 const steps = ['Basic Informations', 'Contact Details', 'Education details', 'Work Experience', 'Skills & Certifications', 'Review & Submit'];
 
+
 function Steps() {
+  const skillSuggestionArray =['NODE JS','EXPRESS','MONGODB','REACT','ANGULAR','NEXT JS','BOOTSTRAP','TAILWIND','CSS','GIT']
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
 
@@ -104,10 +106,23 @@ function Steps() {
       case 4: return (
         <div>
           <h3>Skills</h3>
-          <div className="d-flex row p-3">
-          <TextField id="standard-basic-name" label="Full Name" variant="standard" />
-          <TextField id="standard-basic-job" label="Job Title" variant="standard" />
-          <TextField id="standard-basic-location" label="Location" variant="standard" />
+          <div className="d-flex align-items-center justify-content-between p-3">
+          <TextField sx={{width:'400px'}}id="standard-basic-skill" label="Add Skills" variant="standard" />
+          <Button variant="text">ADD</Button>
+          </div>
+          <h5>Suggestions :</h5>
+          <div className="d-flex  flex-wrap justify-content-between my-3">
+            {
+              skillSuggestionArray.map(userSkill =>(
+                <Button className='m-1' key={userSkill} variant="outlined">{userSkill}</Button>
+              ))
+              
+            }
+          </div>
+          <h5>Added Skills</h5>
+          <div className="d-flex  flex-wrap justify-content-between my-3">
+           {/*span must duplicate according to the user added skill*/}
+           <span className='btn btn-primary d-flex align-items-center justify-content-center'>REACT <button className="text-light btn  ">X</button></span>
           </div>
         </div>
       )
@@ -116,7 +131,7 @@ function Steps() {
           <h3>Professional Summary</h3>
           <div className="d-flex row p-3">
           <TextField id="standard-basic-summary" label="Write a short summary of yourself" multiline rows={4} defaultValue={'Motivated Full Stack Web Developer with hands-on experience in developing web applications using React, Angular, Node.js, and MongoDB. Strong problem-solving skills with a focus on writing clean, efficient code. Eager to apply knowledge in real-world projects and grow within a dynamic software development team'}variant="standard" />
-     
+           
           </div>
         </div>
       )

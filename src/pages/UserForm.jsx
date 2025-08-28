@@ -12,6 +12,7 @@ function UserForm() {
         </div>
         <div className="col-6  ">
           <Preview/>
+          
         </div>
       </div>
      </div>
