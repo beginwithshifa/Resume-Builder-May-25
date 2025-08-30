@@ -40,7 +40,8 @@ function Edit() {
                         Edit Details
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                        {/*personal details*/}
+
+                        {/* personal details */}
 
                         <h3>Personal Details</h3>
                         <div className="d-flex row p-3">

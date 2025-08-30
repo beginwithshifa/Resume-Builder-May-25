@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 const LandingPage = () => {
   return (
     <div>
-      <section className="container-fluid fisrt" style={{ width: '100%', overflowX: 'hidden', height: '450px', backgroundImage: "url('https://www.experis.com/-/media/project/manpowergroup/experis/experis-us/articles/all_financial_planning_bluewash_rgb_150.jpg')", backgroundAttachment: 'fixed', backgroundPosition: 'top', backgroundSize: 'cover' }} id='part1'>
-        <div className="row pt-5">
+      <section className="container-fluid row align-items-center" style={{ width: '100%', overflowX: 'hidden', height: '100vh', backgroundImage: "url('https://www.experis.com/-/media/project/manpowergroup/experis/experis-us/articles/all_financial_planning_bluewash_rgb_150.jpg')", backgroundAttachment: 'fixed', backgroundPosition: 'top', backgroundSize: 'cover' }} id='part1'>
+        <div className="row align-items-center">
           <div className="col-12 col-md-4"></div>
           <div className="col-12 col-md-4 shadow border py-5 rounded mt-5 text-center" style={{ backgroundColor: "rgb(255,255,255,0.3" }}>
             <h3>Designed to get hired.</h3>

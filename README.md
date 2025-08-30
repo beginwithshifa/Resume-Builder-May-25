@@ -12,3 +12,5 @@
   - create component folder
 6.setup url for components
   - install raect-router-dom : npm i react-router-dom
+7.Design page
+8.create state to store data in each user interaction page
